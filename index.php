@@ -1,121 +1,100 @@
 
 <?php
-echo 'hello' .'world' . 'centre';
-echo '<br>';
-echo 5 * 3 . '<br>';
-echo 8 / 2 . '<br>';
-echo 3 + 6 . '<br>';
-echo 5 - 2 . '<br>';
-echo 7 % 3 . '<br>';
-$var = '変数の値を出力します';
-echo $var;
-echo '<br>';
-$var = '変数を定義します。';
-echo $var;
-echo '<br>';
-$var = 'Hello';
-$var .= 'world';
-echo $var;
-echo '<br>';
-$var = 'この文字列と';
-$var .= 'この文字列を';
-$var .= '繋げます';
-echo $var;
-echo '<br>';
-$var = 5;
-echo $var . '<br>';
-$var = '文字に上書き';
-echo $var;
-echo '<br>';
-$color = 'red';
-echo "My ${color} car was stolen";
-echo '<br>';
-$var = 11;
-if ($var > 10) {
-    echo '10より大きい数値です';
+
+// 問題１
+$i = 100;
+for($i = 100;$i>0; $i--)
+{
+    echo $i.'<br>';
 }
-echo '<br>';
-$var = 23;
-if ($var >= 20 && $var < 30) {
-    echo '20代です';
+// 問題２
+for($i = 1;$i < 10; $i++)
+{
+    echo $i * 3 .' ';
 }
-echo '<br>';
-$var = 32;
-if ($var >= 20 && $var < 30) {
-    echo '20代です';
+echo"<br>";
+// 問題３
+for($i = 1; $i < 101; $i++)
+{
+if( $i % 15 == 0 ){
+    echo "FizzBuzz<br>";
+}
+else if ( $i % 5 == 0){
+    echo "Buzz<br>";
+}else if ( $i % 3 == 0){
+    echo "Fizz<br>";
+}
+else{
+    echo $i . '<br>';
+    }
+}
+echo"<br>";
+// 　問題４
+ for( $i = 1 ; $i < 101 ;  $i++ ){
+    echo $i;
+    if($i % 10 == 0){
+         echo"<br>";
+     }
+     }
+ echo"<br>";
+
+// // 問題５
+$alpha = ['E', 'A', 'D', 'B', 'A', 'C', 'A', 'B', 'E', 'E', 'A', 'A', 'C'];
+
+$aaa = 0 ;
+
+
+foreach ($alpha as $alphas) {
+    if($alphas == 'A'){
+        $aaa++;
+
+    }
+    
+}
+
+echo $aaa;
+echo"<br>";
+
+
+$english = 70;
+$math = 70;
+$total = $english + $math;
+
+if ($english >= 60 && $math >= 60 && $total >= 140) {
+    echo '合格';
 } else {
-    echo '20代ではありません';
-}
-echo '<br>';
-$var = 19;
-if ($var >= 20 && $var < 30) {
-    echo '20代です';
-} elseif($var >= 30 && $var < 40) {
-    echo '30代です';
-} else {
-    echo '20代または30代ではありません';
-}
-echo '<br>';
-$var = 'male';
-
-switch ($var) {
-    case 'male':
-        // 処理
-        echo '男性です';
-        break;
-    case 'female':
-        // 処理
-        echo '女性です';
-        break;
-    default:
-        // 処理
-        echo '？';
-        break;
-echo '<br>';
+    echo '残念';
 }
 
+echo'<br>';
 
-$var = 0;
+for($ii = 1;$ii < 10; $ii++){
+for ($i = 1; $i <10; $i++ ){
+    echo $i * $ii;
 
-while ($var < 10) {
-    echo $var . '<br>';
-		$var++;
-		if($var === 8) {
-		  break;
-		  
-	} elseif ($var % 3 === 0) {
-			$var++;
-continue;
-	}
+   
+
 }
-for ($i = 0; $i < 10; $i++) {
-	echo $i . '<br>';
+echo'<br>';}
+
+// 回答８
+
+    echo "2 3 5 7 ";
+    
+    for($i = 2; $i < 100; $i++){
+    
+    if($i % 2 == 0){
+        echo " ";
+    }else if($i % 3 == 0){
+        echo " ";
+    }
+    else if($i % 5 == 0){
+        echo " ";
+    }
+    else if($i % 7 == 0){
+        echo " ";
+    }else{
+        echo $i;
+    }
+
 }
-$fruits = ['りんご', 'みかん', 'ばなな'];
-
-foreach ($fruits as $fruit) {
-    echo $fruit . '<br>';
-}
-
-$fruits = ['りんご',  'みかん',  'ばなな', 'マンゴー', 'ドリアン', 'いちご', 'さくらんぼ'];
-
-$aaa = 1;
-
-foreach ($fruits as $fruit) {
-	echo $fruit. ' ';
-
- if($aaa % 3 == 0 ){
-	 echo '<br>';
-
- }
-	$aaa++;
-}
-
-echo '<br>';
-
-$fruits = ['apple' => 'りんご', 'orange' => 'みかん', 'banana' => 'ばなな'];
-foreach ($fruits as $key => $value) {
-echo "${value}は英語で${key} ". '<br>';
-}
-
-
